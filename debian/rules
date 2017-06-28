@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+PACKAGE = libhsqldb-java-maven
+DEBIAN_HSQLDBUTIL_MAVEN_DIR = debian/$(PACKAGE)/usr/share/maven-repo/org/hsqldb/hsqldbutil/debian
+
+override_dh_auto_install:
+	dh_auto_install
+
+
+	mkdir -p $(DEBIAN_HSQLDBUTIL_MAVEN_DIR)
+	cp hsqldbutil.pom.xml $(DEBIAN_HSQLDBUTIL_MAVEN_DIR)/hsqldbutil-debian.pom
+
+%:
+	dh $@

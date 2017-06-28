@@ -1,0 +1,13 @@
+Source: libhsqldb-java-maven
+Section: java
+Priority: optional
+Maintainer: Yury Zavarin <yzavarin@ebi.ac.uk>
+Build-Depends:
+ debhelper (>= 9),
+Standards-Version: 3.9.7
+
+Package: libhsqldb-java-maven
+Architecture: all
+Depends:
+ libhsqldb-java (= 2.3.3+dfsg2-1),
+Description: HSQLDB artifacts available from Debian local Maven repo
